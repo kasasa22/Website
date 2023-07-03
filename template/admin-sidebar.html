@@ -21,14 +21,14 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                <li><a href="{% static 'admin-index.html' %}"><i class="fa fa-tachometer"></i> Dashboard</a></li>
-                <li><a href="{% static 'category.html' %}"><i class="fa fa-list"></i> Medicine Category</a></li>
-                <li><a href="{% static 'supplier.html' %}"><i class="fa fa-truck"></i> Supplier</a></li>
-                <li><a href="{% static 'cashier.html' %}"><i class="fa fa-user"></i> Cashier</a></li>
-                <li><a href="{% static 'medicine.html' %}"><i class="fa fa-medkit"></i> Medicine</a></li>
-                <li><a href="{% static 'sales-detail.html' %}"><i class="fa fa-desktop"></i> Sales</a></li>
-                <li><a href="{% static 'report.html' %}"><i class="fa fa-bar-chart"></i> Report</a></li>
-                <li><a href="{% static 'company.html' %}"><i class="fa fa-building-o"></i> Company</a></li>
+                <li><a href="{% url 'admin_index' %}"><i class="fa fa-tachometer"></i> Dashboard</a></li>
+                <li><a href="{% url 'category' %}"><i class="fa fa-list"></i> Medicine Category</a></li>
+                <li><a href="{% url 'supplier' %}"><i class="fa fa-truck"></i> Supplier</a></li>
+                <li><a href="{% url 'cashier' %}"><i class="fa fa-user"></i> Cashier</a></li>
+                <li><a href="{% url 'medicine' %}"><i class="fa fa-medkit"></i> Medicine</a></li>
+                <li><a href="{% url 'sales_detail' %}"><i class="fa fa-desktop"></i> Sales</a></li>
+                <li><a href="{% url 'report' %}"><i class="fa fa-bar-chart"></i> Report</a></li>
+                <li><a href="{%  url 'company' %}"><i class="fa fa-building-o"></i> Company</a></li>
                 </ul>
               </div>
 
