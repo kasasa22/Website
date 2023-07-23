@@ -3,19 +3,19 @@
   {% include 'header.html' %}
 
   <body class="nav-md">
-    {% include 'admin-sidebar.html' %}
-    {% include 'admin-menufooter.html' %}
+    {% include 'sidebar.html' %}
+    {% include 'menufooter.html' %}
           </div>
         </div>
 
-        {% include 'admin-topnav.html' %}
+        {% include 'topnav.html' %}
 
         <!-- page content -->
         <div class="right_col" role="main">
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3><i class="fa fa-medkit"></i> Medicine</h3>
+                <h3><i class="fa fa-shopping-cart"></i> Daily Sales Details</h3>
               </div>
             </div>
 
@@ -25,9 +25,9 @@
               <div class="col-md-12 col-sm-12  ">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>List of Medicines</h2>
+                    <h2><strong>SLS-101-21</strong> <small class="text-success">Nov 5, 2021</small></h2>
                     <ul class="nav navbar-right panel_toolbox">
-                    <a href="{% url 'add-medicine' %}" class="btn btn-sm btn-info text-white"><i class="fa fa-plus"></i> Add Medicine</a>
+                    <a href="#" class="btn btn-sm btn-info text-white"><i class="fa fa-plus"></i> Add Sales</a>
                     </ul>
                     <div class="clearfix"></div>
                   </div>
@@ -35,13 +35,10 @@
                   <table id="datatable" class="table table-striped table-bordered" style="width:100%">
                       <thead>
                         <tr>
-                          <th>Medicine Code</th>
-                          <th>Image</th>
-                          <th>Name</th>
-                          <th>Purchase Price</th>
-                          <th>Retail Price</th>
+                          <th>Medicine Name</th>
                           <th>Quantity</th>
-                          <th>Unit</th>
+                          <th>Price</th>
+                          <th>Total Amount</th>
                           <th>Action</th>
                         </tr>
                       </thead>
@@ -49,71 +46,51 @@
 
                       <tbody>
                         <tr>
-                          <td>MDCN-101</td>
-                          <td><img src="images/alaxan.png" width="50" style="border-radius:10px" alt="Image"></td>
-                          <td>Tuseran</td>
-                          <td>Php8.00</td>
-                          <td>Php10.00</td>
-                          <td>100</td>
-                          <td>pcs</td>
-                          <td>
-                              <a class="btn btn-sm btn-info text-white"><i class="fa fa-eye"></i> details</a>
-                              <a class="btn btn-sm btn-success text-white"><i class="fa fa-edit"></i> edit</a>
-                              <a class="btn btn-sm btn-danger text-white"><i class="fa fa-trash"></i> delete</a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>MDCN-234</td>
-                          <td><img src="images/alaxan.png" width="50" style="border-radius:10px" alt="Image"></td>
-                          <td>BioFlu</td>
-                          <td>Php7.00</td>
-                          <td>Php12.00</td>
-                          <td>120</td>
-                          <td>pcs</td>
-                          <td>
-                              <a class="btn btn-sm btn-info text-white"><i class="fa fa-eye"></i> details</a>
-                              <a class="btn btn-sm btn-success text-white"><i class="fa fa-edit"></i> edit</a>
-                              <a class="btn btn-sm btn-danger text-white"><i class="fa fa-trash"></i> delete</a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>MDCN-454</td>
-                          <td><img src="images/alaxan.png" width="50" style="border-radius:10px" alt="Image"></td>
-                          <td>Neozep</td>
-                          <td>Php5.00</td>
-                          <td>Php7.00</td>
-                          <td>200</td>
-                          <td>pcs</td>
-                          <td>
-                              <a class="btn btn-sm btn-info text-white"><i class="fa fa-eye"></i> details</a>
-                              <a class="btn btn-sm btn-success text-white"><i class="fa fa-edit"></i> edit</a>
-                              <a class="btn btn-sm btn-danger text-white"><i class="fa fa-trash"></i> delete</a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>MDCN-122</td>
-                          <td><img src="images/alaxan.png" width="50" style="border-radius:10px" alt="Image"></td>
-                          <td>Alaxan</td>
-                          <td>Php8.00</td>
-                          <td>Php10.00</td>
-                          <td>30</td>
-                          <td>box</td>
-                          <td>
-                              <a class="btn btn-sm btn-info text-white"><i class="fa fa-eye"></i> details</a>
-                              <a class="btn btn-sm btn-success text-white"><i class="fa fa-edit"></i> edit</a>
-                              <a class="btn btn-sm btn-danger text-white"><i class="fa fa-trash"></i> delete</a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>MDCN-675</td>
-                          <td><img src="images/alaxan.png" width="50" style="border-radius:10px" alt="Image"></td>
                           <td>Biogesic</td>
-                          <td>Php5.00</td>
-                          <td>Php8.00</td>
-                          <td>20</td>
-                          <td>box</td>
+                          <td>30</td>
+                          <td>Php7.00</td>
+                          <td>Php210.00</td>
                           <td>
-                              <a class="btn btn-sm btn-info text-white"><i class="fa fa-eye"></i> details</a>
+                              <a class="btn btn-sm btn-success text-white"><i class="fa fa-edit"></i> edit</a>
+                              <a class="btn btn-sm btn-danger text-white"><i class="fa fa-trash"></i> delete</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Alaxan</td>
+                          <td>20</td>
+                          <td>Php10.00</td>
+                          <td>Php200.00</td>
+                          <td>
+                              <a class="btn btn-sm btn-success text-white"><i class="fa fa-edit"></i> edit</a>
+                              <a class="btn btn-sm btn-danger text-white"><i class="fa fa-trash"></i> delete</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Tuseran</td>
+                          <td>50</td>
+                          <td>Php8.00</td>
+                          <td>Ph400.00</td>
+                          <td>
+                              <a class="btn btn-sm btn-success text-white"><i class="fa fa-edit"></i> edit</a>
+                              <a class="btn btn-sm btn-danger text-white"><i class="fa fa-trash"></i> delete</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>BioFlu</td>
+                          <td>45</td>
+                          <td>Php12.00</td>
+                          <td>Php540.00</td>
+                          <td>
+                              <a class="btn btn-sm btn-success text-white"><i class="fa fa-edit"></i> edit</a>
+                              <a class="btn btn-sm btn-danger text-white"><i class="fa fa-trash"></i> delete</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Enervon</td>
+                          <td>100</td>
+                          <td>Php6.00</td>
+                          <td>Php600.00</td>
+                          <td>
                               <a class="btn btn-sm btn-success text-white"><i class="fa fa-edit"></i> edit</a>
                               <a class="btn btn-sm btn-danger text-white"><i class="fa fa-trash"></i> delete</a>
                           </td>
